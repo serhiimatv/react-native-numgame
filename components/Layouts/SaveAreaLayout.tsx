@@ -9,7 +9,6 @@ const SaveAreaLayout = ({
   style?: StyleProp<ViewStyle>;
 }) => {
   const safeAreaInsets = useSafeAreaInsets();
-  console.log(safeAreaInsets);
   return (
     <View
       style={[

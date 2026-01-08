@@ -5,6 +5,7 @@ import {
   View,
   useWindowDimensions,
 } from 'react-native';
+// @ts-ignore
 import Title from '../components/ui/Title';
 import { useEffect, useState } from 'react';
 import NumberContainer from '../components/game/NumberContainer';

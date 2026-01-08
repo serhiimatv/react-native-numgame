@@ -10,6 +10,7 @@ import {
 import PrimaryButton from '../components/ui/PrimaryButton';
 import { useState } from 'react';
 import { Colors } from '../enums/colors';
+// @ts-ignore
 import Title from '../components/ui/Title';
 import Card from '../components/ui/Card';
 import InstructionText from '../components/ui/InstructionText';
