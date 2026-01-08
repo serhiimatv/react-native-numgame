@@ -1,11 +1,11 @@
 import { StyleSheet, ImageBackground } from 'react-native';
 import SaveAreaLayout from './Layouts/SaveAreaLayout';
 import StartGameScreen from '../screen/StartGameScreen';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useState } from 'react';
 import GameScreen from '../screen/GameScreen';
 import { Colors } from '../enums/colors';
 import GameOverScreen from '../screen/GameOverScreen';
+import { LinearGradient } from 'react-native-linear-gradient';
 
 const AppContent = () => {
   const [userNumber, setUserNumber] = useState<number | null>(null);
