@@ -9,16 +9,16 @@ const SaveAreaLayout = ({
   style?: StyleProp<ViewStyle>;
 }) => {
   const safeAreaInsets = useSafeAreaInsets();
+  console.log(safeAreaInsets);
   return (
     <View
       style={[
         style,
         styles.container,
         {
-          top: safeAreaInsets.top,
-          left: safeAreaInsets.left,
-          right: safeAreaInsets.right,
-          bottom: safeAreaInsets.bottom,
+          marginTop: safeAreaInsets.top,
+          marginLeft: safeAreaInsets.left,
+          marginRight: safeAreaInsets.right,
         },
       ]}
     >

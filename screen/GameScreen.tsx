@@ -7,7 +7,6 @@ import Card from '../components/ui/Card';
 import InstructionText from '../components/ui/InstructionText';
 import Ionicons from '@react-native-vector-icons/ionicons';
 import GuessLogItem from '../components/game/GuessLogItem';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 function generateRandomBetween(min: number, max: number, exclude: number) {
   const rndNum = Math.floor(Math.random() * (max - min)) + min;
@@ -32,8 +31,6 @@ const GameScreen = ({
   const initialGuess = generateRandomBetween(1, 100, userNumber);
   const [currentGuess, setCurrentGuess] = useState<number>(initialGuess);
   const [guessRounds, setGuessRounds] = useState<number[]>([initialGuess]);
-
-  const safeAreaInsets = useSafeAreaInsets();
 
   function nextGuessHandler(direction: 'lower' | 'greater') {
     if (
@@ -92,9 +89,7 @@ const GameScreen = ({
           </View>
         </View>
       </Card>
-      <View
-        style={[styles.listContainer, { paddingBottom: safeAreaInsets.bottom }]}
-      >
+      <View style={styles.listContainer}>
         <FlatList
           data={guessRounds}
           renderItem={itemData => (
@@ -117,6 +112,7 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 24,
+    alignItems: 'center',
   },
   instructionText: {
     marginBottom: 12,
@@ -130,6 +126,6 @@ const styles = StyleSheet.create({
   listContainer: {
     flex: 1,
     paddingHorizontal: 16,
-    paddingTop: 16,
+    marginTop: 16,
   },
 });
